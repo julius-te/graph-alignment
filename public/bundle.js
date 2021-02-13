@@ -162,6 +162,7 @@ function $drawEdges(network) {
         for (var j = 0; j < ns.length; j++) {
             var n_1 = ns[j];
             ctx.beginPath();
+            ctx.lineWidth = 3;
             ctx.moveTo(node.x, node.y);
             ctx.lineTo(n_1.x, n_1.y);
             ctx.stroke();

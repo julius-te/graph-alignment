@@ -217,6 +217,7 @@ function $drawEdges(network: Network) {
     for (let j=0; j<ns.length; j++) {
       const n = ns[j];
       ctx.beginPath();
+      ctx.lineWidth = 3;
       ctx.moveTo(node.x, node.y);
       ctx.lineTo(n.x, n.y);
       ctx.stroke();
