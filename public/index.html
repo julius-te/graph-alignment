@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Network</title>
+  <script defer src="bundle.js"></script>
+  <style>
+    canvas {
+      margin: 0;
+      outline: 1px solid black;
+      width: auto;
+    }
+    body {
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      
+    }
+    #control {
+      width: 300px;
+      margin: 0;
+      padding: 1rem;
+      outline: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <div id="control">
+    <div id="nodeCount">
+      <label>node count</label>
+      <input type="range" min="2" max="1000" value="25">
+      <a>25</a>
+    </div>
+    <div id="nodeRadius">
+      <label>node radius</label>
+      <input type="range" min="0" max="100" value="25">
+      <a>25</a>
+    </div>
+    <div id="distance">
+      <label>distance</label>
+      <input type="range" min="0" max="5000" value="100" step="0.1">
+      <a>100</a>
+    </div>
+    <div id="alpha">
+      <label>alpha</label>
+      <input type="range" min="0" max="0.2" value="0.005" step="0.0001">
+      <a>0.005</a>
+    </div>
+    <div id="factor">
+      <label>factor</label>
+      <input type="range" min="0" max="100" value="5" step=".1">
+      <a>5</a>
+    </div>
+    <div id="edgeCount">
+      <label>edge count</label>
+      <input type="range" min="0" max="50" value="1">
+      <a>1</a>
+    </div>
+    <div id="impulse">
+      <label>impulse</label>
+      <input type="range" min="0" max="1" value="0.01" step="0.001">
+      <a>0.01</a>
+    </div>
+    <div id="maxTime">
+      <label>max time</label>
+      <input type="range" min="0" max="150" value="50" step="1">
+      <a>50</a>
+    </div>
+    <div id="resetPosition">
+      <button>reset position</button>
+    </div>
+    <div id="shuffle">
+      <button>shuffle</button>
+    </div>
+    <div id="pause">
+      <label>pause</label>
+      <input type="checkbox">
+      <a>false</a>
+    </div>
+    <div id="fps">
+      <label>fps</label>
+      <a>50</a>
+    </div>
+    <div id="speed">
+      <label>speed</label>
+      <a>50</a>
+    </div>
+  </div>
+
+  <canvas></canvas>
+</body>
+</html>
